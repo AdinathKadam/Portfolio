@@ -143,7 +143,17 @@ document.querySelectorAll('[data-list]').forEach(function(host){
 /* ── media strip (index.html) ─────────────────────────────── */
 var strip = document.getElementById('mediaStrip');
 if(strip){
-  PRESS.filter(function(p){ return p.home; }).forEach(function(p){
+  /* Two sources feed this strip: press written about the work,
+     and the articles written for a publication. A record entry
+     opts in with a `media` object carrying the card's wording. */
+  var cards = PRESS.filter(function(p){ return p.home; })
+    .concat(RECORD.filter(function(r){ return r.media; })
+      .map(function(r){
+        return { outlet:r.media.outlet, meta:r.media.meta,
+                 head:r.media.head, link:r.link };
+      }));
+
+  cards.forEach(function(p){
     var a = document.createElement('a');
     a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
     a.innerHTML =

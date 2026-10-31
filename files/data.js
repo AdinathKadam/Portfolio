@@ -38,6 +38,8 @@ var RECORD = [
     link:"https://zenodo.org/records/20263655", linkLabel:"View on Zenodo" },
 
   { kind:"Article", group:"Research", own:true, home:true, year:"2026",
+    media:{ outlet:"FP&A Trends", meta:"Feature article · Digest Issue 170",
+            head:"AI in FP&A: the line between automation and judgement" },
     title:"FP&A Trends — AI in FP&A: automation vs. judgment",
     dek:"Feature article · carried in Digest Issue 170",
     body:"Where AI belongs in the FP&A workflow, and where human judgment has to stay. Selected for the FP&A Trends Digest and distributed to a practitioner list of more than 17,000, then featured again in the FP&A Trends Club on LinkedIn.",
@@ -47,6 +49,8 @@ var RECORD = [
     link2:"https://fpa-trends.com/author/adinath-kadam", link2Label:"Author profile" },
 
   { kind:"Article", group:"Research", own:true, home:true, year:"Oct 2026",
+    media:{ outlet:"FP&A Trends", meta:"Feature article · 29 October 2026",
+            head:"Your FP&A AI prototype works. But can the CFO control it?" },
     title:"FP&A Trends — can the CFO control the AI prototype?",
     dek:"&ldquo;Your FP&A AI Prototype Works. But Can the CFO Control It?&rdquo; &middot; 29 October 2026",
     body:"Five controls &mdash; source, calculation, context, generation and approval &mdash; that make an AI-assisted reporting prototype auditable: KPIs computed in SQL and Python, the language model restricted to explaining figures it was handed, and a named person signing off before anything leaves. The rule it argues from is the one the insurance agent above is built on: the model explains, it does not calculate.",
