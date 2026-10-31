@@ -35,7 +35,7 @@ var QUIZ = [
   { q:"Who pitched the Zawya feature to the publication?",
     a:["The editor of The Built Economy","Adinath himself","A PR agency","Zawya's own newsroom, unprompted"],
     correct:0,
-    why:"Dennis Daniel, Editor in Chief of The Built Economy, pitched it after recording the interview. The site says so rather than letting the LSEG masthead imply otherwise." },
+    why:"Dennis Daniel, Editor in Chief of The Built Economy, pitched it after recording the interview. Zawya's own Dennis Daniel reported it and Anoop Menon edited it. The site says so rather than leaving the reader to guess." },
 
   { q:"Where did Adinath give two invited guest lectures in 2026?",
     a:["Stevens Institute of Technology","SUNY Fredonia","University of Texas at Dallas","London Business School"],
@@ -67,6 +67,15 @@ if(quizRoot){
   var qOpts  = quizRoot.querySelector('.q-opts');
   var qWhy   = quizRoot.querySelector('.q-why');
   var qNext  = quizRoot.querySelector('.q-next');
+
+  /* turn the card over between questions — the one flourish
+     this section gets, and only where motion is welcome */
+  function turn(el){
+    if(!el || !document.documentElement.classList.contains('depth')) return;
+    el.classList.remove('turning');
+    void el.offsetWidth;                       // restart the animation
+    el.classList.add('turning');
+  }
 
   function renderQ(){
     var item = QUIZ[qi];
@@ -107,6 +116,8 @@ if(quizRoot){
       });
       qOpts.appendChild(b);
     });
+
+    turn(quizRoot.querySelector('.q-body'));
   }
 
   function finish(){
@@ -200,6 +211,13 @@ if(gameRoot){
                  '<span class="g-v">'+money(r.rep)+'</span>'+
                '</button>';
       }).join('');
+
+    if(document.documentElement.classList.contains('depth')){
+      gTable.querySelectorAll('.g-row').forEach(function(r,i){
+        r.style.setProperty('--gd', (i * 45) + 'ms');
+        r.classList.add('dealing');
+      });
+    }
 
     gTable.querySelectorAll('.g-row').forEach(function(btn){
       btn.addEventListener('click', function(){

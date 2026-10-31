@@ -146,6 +146,7 @@ if(strip){
   PRESS.filter(function(p){ return p.home; }).forEach(function(p){
     var a = document.createElement('a');
     a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
+    if(p.channel) a.className = 'is-channel';   // placed, not independent editorial
     a.innerHTML =
       '<span class="outlet">'+p.outlet+'</span>'+
       '<span class="meta">'+esc(p.meta)+'</span>'+

@@ -79,3 +79,41 @@ across both pages.
 Fonts come from Google Fonts. If you'd rather not depend on that, download
 Archivo, IBM Plex Sans and IBM Plex Mono into `files/fonts/`, and replace the
 `<link>` in both pages with local `@font-face` rules.
+
+## The design system
+
+Everything visual comes from the token block at the top of `files/site.css`.
+If a value you want is not in it, use the nearest one that is.
+
+**Type — six text sizes, six display sizes.** `11` mono codes · `12` labels ·
+`13` captions · `15` secondary body · `17` body and lead · `21` large lead.
+Display runs `--d0` to `--d5`, each a clamp. There were twenty-five sizes
+before, twelve of them between 12 and 17px.
+
+**Spacing — multiples of 4, nothing else.** `--s1` 4px through `--s10` 128px.
+Section rhythm 128 top / 96 bottom, dropping to 64 / 48 below 860px. 1-3px is
+for hairlines only.
+
+**Colour.** Flat `--volt` (`#FFC531`) means one thing: *an outside body decided
+this* — the award markers, the credential rail, external sources in the ledger,
+the external kind labels. It is never a hover state and never a section number.
+`--chalk-2b` (6.0:1) for anything under 14px; `--chalk-3` (4.2:1) only for
+inert marks that spell nothing.
+
+**The accent gradient.** One gradient, three stops, built from the same yellow:
+`#FFC531 → #FF7A00 → #FF2E63` at `100deg`, as `--grad`. `--grad-press` lays 10%
+black over the same stops for hover, which keeps black label text at 4.9:1 on
+the magenta end. It appears in exactly three places — primary CTAs, one ambient
+glow on `.hero-stage::before`, and the hover/active edges of cards and links —
+and nowhere else. **Meaning is flat yellow; interaction is the gradient.**
+
+**Motion — four durations, three curves.** `--d-fast` 120ms, `--d-base` 220ms,
+`--d-slow` 420ms, `--d-arrive` 700ms. `--e-out` entering, `--e-soft` between
+states, `--e-firm` both ends. Hover arrives at fast and leaves at base. Nothing
+is `linear` except the drill countdown.
+
+**Layout.** Section heads are two columns above 1040px — heading left, deck
+right. `files/depth.js` carries all motion and is gated on `html.depth`, set
+only when the script runs, motion is not reduced, and the viewport is over
+900px. The method grid is `pointer-events:none` with cards set back to `auto`,
+because cards resting behind its plane would otherwise lose their clicks.

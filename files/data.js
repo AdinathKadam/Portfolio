@@ -46,6 +46,13 @@ var RECORD = [
     link:"https://fpa-trends.com/article/ai-fpa-line-between-automation-and-judgement", linkLabel:"Read the article",
     link2:"https://fpa-trends.com/author/adinath-kadam", link2Label:"Author profile" },
 
+  { kind:"Article", group:"Research", own:true, home:true, year:"Oct 2026",
+    title:"FP&A Trends — can the CFO control the AI prototype?",
+    dek:"&ldquo;Your FP&A AI Prototype Works. But Can the CFO Control It?&rdquo; &middot; 29 October 2026",
+    body:"Five controls &mdash; source, calculation, context, generation and approval &mdash; that make an AI-assisted reporting prototype auditable: KPIs computed in SQL and Python, the language model restricted to explaining figures it was handed, and a named person signing off before anything leaves. The rule it argues from is the one the insurance agent above is built on: the model explains, it does not calculate.",
+    ev:"Written by me; the decision to publish it was the publication&rsquo;s.",
+    link:"https://fpa-trends.com/article/your-fpa-ai-prototype-works-can-cfo-control-it", linkLabel:"Read the article" },
+
   { kind:"System", group:"Systems", own:true, year:"2026",
     title:"Insurance FP&A agent — live prototype",
     dek:"Python · cloud database · Streamlit",
@@ -88,7 +95,7 @@ var PRESS = [
   { outlet:"Zawya", meta:"LSEG · June 2026", home:true,
     head:"Rising cost drag prompts construction sector to re-evaluate SaaS models",
     desc:"Quoted throughout as a US-based FP&A systems architect — on SaaS cost drag, cloud-native FP&A migration, and AI-assisted financial decision-making.",
-    flag:"How it came about: the feature was pitched to Zawya by the editor of The Built Economy, following the interview below.",
+    flag:"Reported by Dennis Daniel and edited by Anoop Menon for Zawya, part of LSEG. How it came about: the feature was pitched to Zawya by the editor of The Built Economy, following the interview below.",
     image:"files/zawya.webp", w:1000, h:637, caption:"The Zawya feature as published, June 2026.",
     link:"https://www.zawya.com/en/projects/construction/rising-cost-drag-prompts-construction-sector-to-re-evaluate-saas-models-oxjpcafi",
     linkLabel:"Read the feature" },
