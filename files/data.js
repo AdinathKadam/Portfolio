@@ -117,7 +117,7 @@ var PRESS = [
     link:"https://www.youtube.com/watch?v=IwOGnADobnI&t=2286s",
     linkLabel:"Watch on YouTube" },
 
-  { outlet:"HackerNoon", meta:"Profile",
+  { outlet:"HackerNoon", meta:"Profile", home:true,
     head:"Cloud-native finance transformation with Adinath Kadam",
     desc:"A profile of the cloud-native FP&A work and the reasoning behind keeping Excel as the analyst-facing layer.",
     link:"https://hackernoon.com/cloud-native-finance-transformation-with-adinath-kadam",
