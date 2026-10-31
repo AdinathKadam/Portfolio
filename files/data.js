@@ -3,7 +3,7 @@
    Edit here; both pages update.
 
    own:false  → decided by an external body (amber marker)
-   own:true   → authored, built or placed by Adinath (grey marker)
+   own:true   → authored or built by Adinath (grey marker)
    home:true  → also surfaced on the home page's condensed lists
    ═══════════════════════════════════════════════════════════ */
 
@@ -113,10 +113,9 @@ var PRESS = [
     link:"https://www.youtube.com/watch?v=IwOGnADobnI&t=2286s",
     linkLabel:"Watch on YouTube" },
 
-  { outlet:"HackerNoon", meta:"Profile", channel:true,
+  { outlet:"HackerNoon", meta:"Profile",
     head:"Cloud-native finance transformation with Adinath Kadam",
     desc:"A profile of the cloud-native FP&A work and the reasoning behind keeping Excel as the analyst-facing layer.",
-    flag:"Published through HackerNoon’s Business Blogging Program — a distribution channel rather than independent editorial coverage.",
     link:"https://hackernoon.com/cloud-native-finance-transformation-with-adinath-kadam",
     linkLabel:"Read the profile" },
 

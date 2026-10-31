@@ -311,7 +311,6 @@ footer{border-top:1px solid var(--line);margin-top:60px}
 .media .outlet{font-family:var(--f-disp);font-weight:800;font-stretch:104%;text-transform:uppercase;font-size:15px;letter-spacing:-.008em}
 .media .meta{margin-top:8px;font-size:var(--lab);font-weight:600;letter-spacing:var(--lab-t);text-transform:uppercase;color:var(--chalk-2b)}
 .media .head{margin-top:16px;font-size:15px;color:var(--chalk-2);line-height:1.45}
-.media a.is-channel .outlet{color:var(--chalk-2b)}   /* placed coverage reads greyer, as in the ledger */
 .media .go{margin-top:16px;font-size:var(--lab);font-weight:600;letter-spacing:var(--lab-t);text-transform:uppercase;color:var(--chalk-2b)}
 @media(max-width:900px){.media{grid-template-columns:1fr}}
 
@@ -393,7 +392,6 @@ footer{border-top:1px solid var(--line);margin-top:60px}
 .clip:last-child{border-bottom:0}
 .clip-fig{padding-top:4px}
 .clip-outlet{font-family:var(--f-disp);font-weight:800;font-stretch:104%;text-transform:uppercase;font-size:15px;letter-spacing:-.008em;line-height:1.1}
-.clip.channel .clip-outlet{color:var(--chalk-2b)}
 .clip-meta{margin-top:8px;font-size:var(--lab);font-weight:600;letter-spacing:var(--lab-t);text-transform:uppercase;color:var(--chalk-2b);line-height:1.7}
 .clip-meta span{display:block}
 .clip-head{font-family:var(--f-disp);font-weight:800;font-stretch:104%;font-size:var(--d2);line-height:1.08;letter-spacing:-.02em;text-transform:uppercase;max-width:34ch}

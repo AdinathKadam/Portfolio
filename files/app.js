@@ -109,7 +109,7 @@ if(pressList){
 
   PRESS.forEach(function(p){
     var el = document.createElement('article');
-    el.className = 'clip' + (p.channel ? ' channel' : '') + ((p.image||p.youtube) ? ' has-fig' : '');
+    el.className = 'clip' + ((p.image||p.youtube) ? ' has-fig' : '');
     el.innerHTML =
       '<div><div class="clip-outlet">'+p.outlet+'</div><div class="clip-meta">'+
         p.meta.split(' · ').map(function(m){return '<span>'+esc(m)+'</span>';}).join('')+'</div></div>'+
@@ -146,7 +146,6 @@ if(strip){
   PRESS.filter(function(p){ return p.home; }).forEach(function(p){
     var a = document.createElement('a');
     a.href = p.link; a.target = '_blank'; a.rel = 'noopener';
-    if(p.channel) a.className = 'is-channel';   // placed, not independent editorial
     a.innerHTML =
       '<span class="outlet">'+p.outlet+'</span>'+
       '<span class="meta">'+esc(p.meta)+'</span>'+
